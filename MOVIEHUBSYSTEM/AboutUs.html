@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MovieHub</title>
+  <link rel="stylesheet" href="Dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+      <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+      <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+      <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+    </ul>
+    <div class="search-login">
+      <input type="text" id="search-input" placeholder="Search for movies or genres...">
+      <i class='bx bx-search'></i>    
+      <div class="profile-dropdown">
+        <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+        <div id="dropdown-menu" class="dropdown-content hidden">
+          <a href="ViewProfile.html">View Profile</a>
+          <a href="IT Elective.html">Log Out</a>
+        </div>
+      </div>            
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="about-container">
+    <!-- About Header -->
+    <section class="about-header">
+      <h2>About Us</h2>
+      <p>Welcome to MovieHub, your go-to platform for the latest movies, trailers, and entertainment updates.</p>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="mission-vision">
+      <div class="mission">
+        <h3>Our Mission</h3>
+        <p>To provide a one-stop destination for movie enthusiasts to explore, discover, and enjoy quality content with ease.</p>
+      </div>
+      <div class="vision">
+        <h3>Our Vision</h3>
+        <p>To become the leading platform that connects people with the magic of cinema, inspiring movie lovers worldwide.</p>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="core-values">
+      <h3>Core Values</h3>
+      <ul>
+        <li><strong>Passion for Cinema:</strong> We believe in the power of movies to entertain, inspire, and connect.</li>
+        <li><strong>Innovation:</strong> Continuously improving our platform to deliver an unmatched user experience.</li>
+        <li><strong>Community Focus:</strong> Building a space where movie lovers can share and engage.</li>
+        <li><strong>Quality:</strong> Committed to providing accurate and up-to-date information about the film industry.</li>
+      </ul>
+    </section>
+
+    <!-- Company History -->
+    <section class="history">
+      <h3>Our History</h3>
+      <p>MovieHub was founded in 2024 by a small team of movie enthusiasts who wanted to create an easy and enjoyable way to access movie information. Starting as a simple blog, MovieHub has grown into a fully-fledged platform offering trailers, reviews, and insider news for movie lovers everywhere.</p>
+    </section>
+
+    <p>Meet the creators from NEW ERA UNIVERSITY behind MovieHub</p>
+    <br><br>
+
+    <!-- Creator Profiles Section -->
+    <section class="profile-section">
+      <!-- Profile Card 1 -->
+      <div class="profile-card">
+        <img src="VLAD 2X2.jpg" alt="Creator 1" class="profile-photo">
+        <h3>Bilan, Vladymere S.</h3>
+        <p>Profession: Web Developer</p>
+        <p>Bio: Creating user-friendly web applications with a seamless backend integration.</p>
+      </div>
+
+      <!-- Profile Card 2 -->
+      <div class="profile-card">
+        <img src="Liela Pic.jpg" alt="Creator 2" class="profile-photo">
+        <h3>Barnuevo, Liela Yvette</h3>
+        <p>Profession: Data Analyst</p>
+        <p>Bio: Turning data into actionable insights to enhance user experience.</p>
+      </div>
+
+      <!-- Profile Card 3 -->
+      <div class="profile-card">
+        <img src="Ellix Pic.jpg" alt="Creator 3" class="profile-photo">
+        <h3>Estandian, Ellix</h3>
+        <p>Profession: UI/UX Designer</p>
+        <p>Bio: Crafting engaging interfaces that prioritize user experience.</p>
+      </div>
+
+      <!-- Add more profile cards as needed -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 MovieHub. All rights reserved.</p>
+  </footer>
+
+  <script src="AboutUs.js"></script>
+  <script src="Dashboard.js"></script>
+</body>
+</html>

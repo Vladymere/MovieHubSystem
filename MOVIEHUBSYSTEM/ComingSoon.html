@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - MovieHub</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span>
+            </h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+            <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+            <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+        </ul>
+        
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>    
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="IT Elective.html">Log Out</a>
+                </div>
+            </div>            
+        </div>
+    </nav>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+        <h3>Coming Soon</h3>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img src="UpcomingMovie1.jpg" alt="Upcoming Movie 1">
+                <div class="movie-info">
+                    <h4>Upcoming Movie 1</h4>
+                    <p>Genre, Genre</p>
+                </div>
+                <button onclick="bookNow('Upcoming Movie 1')">Book Now</button>
+            </div>
+            <div class="movie-card">
+                <img src="UpcomingMovie2.jpg" alt="Upcoming Movie 2">
+                <div class="movie-info">
+                    <h4>Upcoming Movie 2</h4>
+                    <p>Genre, Genre</p>
+                </div>
+                <button onclick="bookNow('Upcoming Movie 2')">Book Now</button>
+            </div>
+            <!-- Add other upcoming movies here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="Dashboard.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

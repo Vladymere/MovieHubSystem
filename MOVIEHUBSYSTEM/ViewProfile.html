@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar (Same as Dashboard) -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html">Home</a></li>
+            <li><a href="ComingSoon.html">Coming Soon</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="logout.html">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <h2>My Profile</h2>
+        <div class="profile-card">
+            <img src="VLAD 2X2.jpg" alt="User Avatar" class="profile-avatar">
+            <div class="profile-info">
+                <h3>Username: Vladymere Bilan</h3>
+                <p>Email: dimmybilan@gmail.com</p>
+                <p>Member Since: January 20, 2024</p>
+            </div>
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+    </section>
+
+    <!-- Membership & Booking History -->
+    <section class="membership-section">
+        <h3>Membership Details</h3>
+        <div class="membership-info">
+            <p><strong>Membership Type:</strong> Gold Member</p>
+            <p><strong>Points Balance:</strong> 1200</p>
+            <p><strong>Member Benefits:</strong> Free Popcorn, Early Access to Tickets, Exclusive Discounts</p>
+        </div>
+    </section>
+
+    <section class="bookings-section">
+        <h3>Recent Bookings</h3>
+        <div class="booking-history">
+            <div class="booking-item">
+                <p><strong>Movie:</strong> Spider-Man No Way Home</p>
+                <p><strong>Date:</strong> 2024-10-15</p>
+                <p><strong>Seat:</strong> Row D, Seat 12</p>
+                <p><strong>Status:</strong> Completed</p>
+            </div>
+            <div class="booking-item">
+                <p><strong>Movie:</strong> Black Panther: Wakanda Forever</p>
+                <p><strong>Date:</strong> 2024-09-10</p>
+                <p><strong>Seat:</strong> Row B, Seat 8</p>
+                <p><strong>Status:</strong> Completed</p>
+            </div>
+            <!-- Add more bookings here -->
+        </div>
+    </section>
+
+    <!-- Favorite Movies -->
+    <section class="favorites-section">
+        <h3>Favorite Movies</h3>
+        <div class="favorites-grid">
+            <div class="favorite-movie">
+                <img src="InsideOut2.jpg" alt="Inside Out 2">
+                <p>Inside Out 2</p>
+            </div>
+            <div class="favorite-movie">
+                <img src="BlankPanther2.jpg" alt="Black Panther 2">
+                <p>Black Panther 2</p>
+            </div>
+            <!-- Add more favorites here -->
+        </div>
+    </section>
+
+    <!-- Footer (Same as Dashboard) -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="Dashboard.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle profile dropdown
+        function toggleProfileDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("hidden");
+        }
+
+        // Edit Profile button functionality
+        function editProfile() {
+            window.location.href = "EditProfile.html";
+        }
+    </script>
+</body>
+</html>

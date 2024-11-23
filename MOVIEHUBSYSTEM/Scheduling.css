@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0c0101;
+    color: white; /* Ensure text color is white */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 15px 50px;
+    color: white;
+}
+
+.navbar .logo h1 {
+    font-size: 40px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+}
+
+.search-login input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-login i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-dropdown .dropdown-content {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #333;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.profile-dropdown .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.profile-dropdown .dropdown-content a:hover {
+    background-color: #444;
+}
+
+.profile-dropdown .dropdown-content.hidden {
+    display: none;
+}
+
+.profile-dropdown .dropdown-content.visible {
+    display: flex;
+}
+
+/* Scheduling Container */
+.scheduling-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white; /* Ensure text color is visible */
+}
+
+.scheduling-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scheduling-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.scheduling-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.scheduling-form input,
+.scheduling-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.scheduling-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.scheduling-form button:hover {
+    background-color: #e6b800;
+}
+
+/* Fix for overlapping time input */
+.scheduling-form input[type="time"] {
+    width: calc(100% - 20px); /* Adjust width to prevent overlap */
+}
+
+/* Confirmation Section */
+#confirmation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#confirmation img {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1f1f1f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

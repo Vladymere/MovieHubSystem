@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Movie - MovieHub</title>
+    <link rel="stylesheet" href="Scheduling.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+            <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+            <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+        </ul>
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>    
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="IT Elective.html">Log Out</a>
+                </div>
+            </div>            
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="scheduling-container">
+        <h2>Schedule Your Movie</h2>
+        <form id="scheduling-form" class="scheduling-form">
+            <div class="form-group">
+                <label for="movie-title">Selected Movie:</label>
+                <p id="movie-title">Loading...</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Select Location:</label>
+                <select id="location" required>
+                    <option value="">Select a location</option>
+                    <option value="Location 1">Greenbelt 3 Cinema. Movie Theaters.</option>
+                    <option value="Location 2">Imax Theatre, SM Mall Of Asia. Movie Theaters</option>
+                    <option value="Location 3">Commercenter Cinemas. Movie Theaters.</option>
+                    <option value="Location 4">Bonifacio High Street Cinemas. Movie Theaters.</option>
+                    <option value="Location 5">Solenad 3 Cinema. Movie Theaters.</option>
+                    <option value="Location 6">SM Cinema - SM Fairview. Movie Theaters.</option>
+                    <option value="Location 7">A. Bichara Silverscreens Entertainment Center.</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Quantity of Moviegoers:</label>
+                <input type="number" id="quantity" min="1" max="10" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="seat-numbers">Select Seat Numbers:</label>
+                <input type="text" id="seat-numbers" placeholder="e.g., A1, A2, A3" required>
+            </div>
+
+            <button type="submit" id="finalize-booking">Finalize Booking</button>
+        </form>
+
+        <!-- Optional Confirmation Message Section -->
+        <div id="confirmation" style="display: none;">
+            <h3>Booking Confirmed</h3>
+            <p>Movie: <span id="confirm-movie-title"></span></p>
+            <p>Location: <span id="confirm-location"></span></p>
+            <p>Time: <span id="confirm-time"></span></p>
+            <p>Quantity: <span id="confirm-quantity"></span></p>
+            <p>Seats: <span id="confirm-seats"></span></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="Scheduling.js"></script>
+</body>
+</html>

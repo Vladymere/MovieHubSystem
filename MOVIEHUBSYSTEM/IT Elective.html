@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Bilan, Vladymere</title>
+  <link rel="stylesheet" href="IT Elective.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="loginForm" action="login.php" method="POST">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <i class='bx bxs-lock'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" id="rememberMe">Remember Me</label>
+        <a href="#" id="forgotPasswordLink">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+
+      <br><br> 
+      <div class="social-login">
+        <p>OR</p>
+        <div class="social-buttons">
+          <button id="google" class="google-btn">
+            <i class='bx bxl-google'></i> Sign in with Google
+          </button>
+          <button id="facebook" class="facebook-btn">
+            <i class='bx bxl-facebook'></i> Sign in with Facebook
+          </button>
+        </div>
+      </div>
+
+      <div class="register-link">
+        <p>Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+      </div>
+    </form>
+  
+    <!-- Forgot Password Form (hidden by default) -->
+    <form id="forgotPasswordForm" class="hidden">
+      <h1>Forgot Password</h1>
+      <div class="input-box">
+        <input type="email" id="resetEmail" placeholder="Enter your email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+      <button type="submit" class="btn">Send Reset Link</button>
+      <p><a href="IT Elective.html" id="backToLogin">Back to Login</a></p>
+    </form>
+    
+  </div>
+  <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

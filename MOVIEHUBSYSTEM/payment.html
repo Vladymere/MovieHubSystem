@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - MovieHub</title>
+    <link rel="stylesheet" href="Scheduling.css"> <!-- For consistent header and footer -->
+    <link rel="stylesheet" href="Payment.css"> <!-- For payment-specific styles -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+            <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+            <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+        </ul>
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>    
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="IT Elective.html">Log Out</a>
+                </div>
+            </div>            
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="payment-container">
+        <h2>Payment</h2>
+        <div id="payment-form" class="payment-form">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="Enter your card number">
+            
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY">
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="Enter your CVV">
+            
+            <label for="cardholder-name">Cardholder Name:</label>
+            <input type="text" id="cardholder-name" placeholder="Enter cardholder name">
+            
+            <button id="finalize-payment">Finalize Payment</button>
+        </div>
+
+        <!-- Optional Confirmation Message Section -->
+        <div id="payment-confirmation" style="display: none;">
+            <h3>Payment Confirmed</h3>
+            <p>Thank you for your payment. Your booking is now confirmed.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Payment Container */
+.payment-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.payment-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.payment-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-form button:hover {
+    background-color: #e6b800;
+}
+
+/* Confirmation Section */
+#payment-confirmation {
+    text-align: center;
+    margin-top: 20px;
+}

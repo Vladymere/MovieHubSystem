@@ -1,0 +1,163 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: login.html'); // Redirect to login page if not logged in
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Browsing Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+            <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+            <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+        </ul>
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>    
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="IT Elective.html">Log Out</a>
+                </div>
+            </div>            
+        </div>
+    </nav>
+
+    <!-- Carousel Section (replaces the Hero Banner) -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="Jungkook.jpg" alt="Movie 1">
+                <div class="slide-info">
+                    <h2>JUNGKOOK I AM STILL</h2>
+                    <p>A documentary focusing on the youngest BTS member's journey.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="InsideOut2.jpg" alt="Inside Out 2">
+                <div class="slide-info">
+                    <h2>Inside Out 2</h2>
+                    <p>An emotional adventure inside the mind of a young girl.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="SpiderMan.jpg" alt="Spider-Man No Way Home">
+                <div class="slide-info">
+                    <h2>Spider-Man No Way Home</h2>
+                    <p>Spider-Man faces his biggest challenge yet.</p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="Transformer.jpg" alt="Transformers One">
+                <div class="slide-info">
+                    <h2>Transformers One</h2>
+                    <p>The untold origin story of Optimus Prime and Megatron.</p>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="BlankPanther2.jpg" alt="Black Panther 2">
+                <div class="slide-info">
+                    <h2>Black Panther: Wakanda Forever</h2>
+                    <p>The kingdom of Wakanda faces a new threat.</p>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img src="Avatar2.jpg" alt="Avatar: The Way of Water">
+                <div class="slide-info">
+                    <h2>Avatar: The Way of Water</h2>
+                    <p>A new chapter of the Na'vi's journey.</p>
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="slide">
+                <img src="Matrix.png" alt="The Matrix Resurrections">
+                <div class="slide-info">
+                    <h2>The Matrix Resurrections</h2>
+                    <p>Return to the Matrix and face new realities.</p>
+                </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="slide">
+                <img src="Minions.jpg" alt="Minions: The Rise of Gru">
+                <div class="slide-info">
+                    <h2>Minions: The Rise of Gru</h2>
+                    <p>The untold story of Gru's rise to villainy.</p>
+                </div>
+            </div>
+            <!-- Slide 9 -->
+            <div class="slide">
+                <img src="Joker.png" alt="Joker: Folie à Deux">
+                <div class="slide-info">
+                    <h2>Joker: Folie à Deux</h2>
+                    <p>A sequel that dives deeper into the Joker's psyche.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <!-- Movie Listings -->
+    <section class="movie-listings">
+        <br><br>
+        <h3>Now Showing</h3>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img src="InsideOut2.jpg" alt="Inside Out 2">
+                <div class="movie-info">
+                    <h4>Inside Out 2</h4>   
+                    <p>Animation, Drama, Family, Comedy</p>
+                </div>
+                <button onclick="bookNow('Inside Out 2', 'InsideOut2.jpg')">Book Now</button>
+            </div>
+            <div class="movie-card">
+                <img src="BlankPanther2.jpg" alt="Black Panther 2">
+                <div class="movie-info">
+                    <h4>Black Panther 2</h4>
+                    <p>Action, Drama</p>
+                </div>
+                <button onclick="bookNow('Black Panther 2', 'BlankPanther2.jpg')">Book Now</button>
+            </div>
+            <!-- Add other movies here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function bookNow(movieName) {
+            const url = `scheduling.html?movieName=${encodeURIComponent(movieName)}`;
+            window.location.href = url;
+        }
+    </script>
+    <script src="Dashboard.js"></script>
+    <script src="carousel.js"></script>  <!-- Link to your JavaScript file -->
+</body>
+</html>

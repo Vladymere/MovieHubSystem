@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dashboard.css"> <!-- Include Dashboard styles for consistency -->
+    <link rel="stylesheet" href="ContactUs.css"> <!-- Additional styles for Contact Us page -->
+    <title>Get In Touch - MovieHub</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Icon library -->
+</head>
+<body>
+    <!-- Header Section (Navbar from Dashboard.html) -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Movie<span class="yellow">Hub</span></span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Dashboard.html" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="ComingSoon.html" onclick="navigateTo('comingSoon')">Coming Soon</a></li>
+            <li><a href="AboutUs.html" onclick="navigateTo('aboutUs')">About Us</a></li>
+            <li><a href="ContactUs.html" onclick="navigateTo('contactUs')">Contact Us</a></li>
+        </ul>
+        
+        <div class="search-login">
+            <input type="text" id="search-input" placeholder="Search for movies or genres...">
+            <i class='bx bx-search'></i>    
+            <div class="profile-dropdown">
+                <i class='bx bx-user' id="profile-icon" onclick="toggleProfileDropdown()"></i>
+                <div id="dropdown-menu" class="dropdown-content hidden">
+                    <a href="ViewProfile.html">View Profile</a>
+                    <a href="IT Elective.html">Log Out</a>
+                </div>
+            </div>            
+        </div>
+    </nav>
+
+    <!-- Contact Us Content -->
+    <div class="container">
+        <!-- Header Content for Contact Us -->
+        <div class="header">
+            <h1>We're Here for You</h1>
+            <p>Questions, suggestions, or just want to say hi? Reach out, and let’s get the conversation started!</p>
+        </div>
+
+        <!-- Contact Details Card with Links -->
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>📍 Address:</strong> #9 Central Avenue, New Era, Quezon City</p>
+                <p><strong>📞 Phone:</strong> <a href="tel:1234567890">123-456-7890</a></p>
+                <p><strong>📧 Email:</strong> <a href="mailto:info@neu.edu.ph">info@neu.edu.ph</a></p>
+                <p><strong>🌐 Website:</strong> <a href="https://www.moviehub.com" target="_blank">www.moviehub.com</a></p>
+            </div>
+        </div>
+
+        <!-- Message Form -->
+        <div class="message-form">
+            <h3>Send Us a Message</h3>
+            <p>We’d love to hear from you. Drop us a note below:</p>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section (from Dashboard.html) -->
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="Dashboard.js"></script> <!-- For interactivity with navbar or dropdown -->
+</body>
+</html>
